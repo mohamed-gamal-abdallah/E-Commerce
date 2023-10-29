@@ -1,0 +1,79 @@
+<nav #navbar class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink=""> 
+            <img src="./assets/images/freshcart-logo.svg" alt="freshcart">
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active-link">Home</a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/products" routerLinkActive="active-link">products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/brands" routerLinkActive="active-link">brands</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/categories" routerLinkActive="active-link">categories</a>
+                </li>
+                
+                
+                
+            </ul>
+
+
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+
+                <!-- ====================whislist========================= -->
+
+                <li class="nav-item">
+                    <a class="nav-link position-relative" routerLink="/whislist" >
+                        <i class="fa-solid fa-heart fa-2x text-danger"></i>
+                        <span class="badge bg-info position-absolute top-0 end-0">{{wishnumber}}</span>    
+                    </a>
+                </li>
+
+                <!-- ===================================================== -->
+
+
+                <li class="nav-item">
+                    <a class="nav-link position-relative" routerLink="/cart" >
+                        <i class="fas fa-cart-shopping fa-2x text-main"></i>
+                        <span class="badge bg-info position-absolute top-0 end-0">{{cartNumber}}</span>    
+                    </a>
+                </li>
+                <li class="nav-item d-flex gap-3  me-3">
+                   <a href=""><i class="fab fa-instagram"></i></a>
+                   <a href=""><i class="fab fa-facebook"></i></a>
+                   <a href=""><i class="fab fa-tiktok"></i></a>
+                   <a href=""><i class="fab fa-twitter"></i></a>
+                   <a href=""><i class="fab fa-youtube"></i></a>
+                </li>
+                <li class="nav-item dropdown me-3" role="button">
+                    <h6 class="small mb-0 " routerLink="/forgotpassword">Forgot Password ?</h6>
+                  </li>
+
+                <li class="nav-item">
+                    <span role="button" (click)="signOut()">signOut</span>
+                 </li>
+                
+                
+                
+                
+                
+            </ul>
+            
+        </div>
+  </div>
+</nav>
+
